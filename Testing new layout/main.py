@@ -12,8 +12,13 @@ class MyLayout(Widget):
     def clear(self):
         self.ids.textinp.text = ""
 
+    def build(self):
+        kv = Builder.load_file("styles.kv")
+        return kv
+
 class application(App):
     def build(self):
+        MyLayout.build()
         Window.clearcolor = (1, 1, 1, 1) #Hintergrund Window
         return MyLayout()
 
