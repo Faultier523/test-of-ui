@@ -6,26 +6,36 @@
     FloatLayout:
         size: root.width, root.height
 
-        Button:
-            text:"Top Left"
-            pos_hint: {"x": 0, "top": 1}
-            size_hint:(0.1, 0.1)
-            on_release: root.clear()
-
-        Button:
+       Button:
+            id: logo
             pos_hint: {"x": .5, "top": .9}
             size_hint:(0, 0)
             text: "Hello"
-            color: 0, 0, 0, 1
+            color: 0, 0, 0, 0
 
             Image:
                 source: "images/Youtube.png"
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
-        TextInput:
-            id: textinp
-            pos_hint: {"right": .7, "top": .3}
-            size_hint:(0.4, 0.1)
-            multiline:False
-            text_color: (0, 0, 1, 1)
+        Label:
+            id: dichter
+            text: "YT-Downloader"
+            pos_hint: {"center_x": .5, "center_y": .75}
+            font_size: "40sp"
+            halign: "center"
+            color: 0, 0, 0, 1
+            
+         TextInput:
+            id: link
+            hint_text: "YT-Link"
+            pos_hint: {"left": 1, "center_y": 0}
+            multiline: False
+            size_hint:(1, .2)
+            cursor_color: 1, 1, 1, 1
+            color: 1, 1, 1, 1
+            cursor_width: "6sp"
+            background_color: 0, 0, 0, 1
+            padding: 10
+            font_size: "15sp"
+
