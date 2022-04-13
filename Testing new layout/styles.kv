@@ -1,0 +1,30 @@
+<Button>
+    font_size: 32
+
+<MyLayout>
+
+    FloatLayout:
+        size: root.width, root.height
+
+        Button:
+            text:"Top Left"
+            pos_hint: {"x": 0, "top": 1}
+            size_hint:(0.1, 0.1)
+            on_release: root.clear()
+
+        Button:
+            pos_hint: {"x": .5, "top": .9}
+            size_hint:(0, 0)
+            text: "Hello"
+            color: 0, 0, 0, 1
+
+            Image:
+                source: "images/Youtube.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        TextInput:
+            id: textinp
+            pos_hint: {"right": .7, "top": .3}
+            size_hint:(0.4, 0.1)
+            multiline:False
